@@ -5,6 +5,8 @@ import { BsFillMoonStarsFill } from 'react-icons/bs'
 import { AiFillLinkedin, AiFillTwitterCircle, AiFillYoutube } from 'react-icons/ai'
 import Image from 'next/image'
 import me1 from "../public/me1.png"
+import Card from '@/components/Card'
+import Logo from "../public/csarmientobacaLogo.png"
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -20,9 +22,12 @@ export default function Home() {
       <main className='bg-white px-10'>
         <section className='min-h-screen'>
           <nav className='py-10 mb-12 flex justify-between'>
-            <h1 className='font-burtons'>
+            <div className='relative bg-gradient-to-b from-teal-500 rounded-md w-20 h-20 overflow-hidden'>
+              <Image alt='myLogo' src={Logo} layout='fill' objectFit='cover' />
+            </div>
+            {/* <h1 className='font-burtons'>
               Developed by csarmientobaca
-            </h1>
+            </h1> */}
             <ul className='flex items-center'>
               <li>
                 <BsFillMoonStarsFill className='cursor-pointer text-2xl' />
@@ -63,15 +68,24 @@ export default function Home() {
         <section>
           <div>
             <h3 className='text-3xl py-1'>Services i offer</h3>
-            <p>
+            <p className='text-md py-2 leading-8 text-gray-800'>
               Im new in this world, im pasionate and full of energy to learn a lot.
               Right now i take any remote work and i could work even overseas.
             </p>
+            <p className='text-md py-2 leading-8 text-gray-800'>
+              Im a gamer, all my life was around games, pc, and programing. right now im taking the reins of my life and
+              in the programing world.
+            </p>
           </div>
-
+          <div>
+            <div>
+              <Card title={"Card1"} description={"description for card"} />
+            </div>
+          </div>
 
         </section>
       </main>
+
 
     </div >
 
