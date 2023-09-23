@@ -2,11 +2,13 @@
 
 import Head from 'next/head'
 import { BsFillMoonStarsFill } from 'react-icons/bs'
-import { AiFillLinkedin, AiFillTwitterCircle, AiFillYoutube } from 'react-icons/ai'
+import { AiFillGithub, AiFillLinkedin, AiFillTwitterCircle, AiFillYoutube } from 'react-icons/ai'
 import Image from 'next/image'
 import me1 from "../public/me1.png"
 import Card from '@/components/Card'
 import Logo from "../public/csarmientobacaLogo.png"
+import Card1 from '@/components/Card1'
+import Link from 'next/link'
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -22,7 +24,7 @@ export default function Home() {
       <main className='bg-white px-10'>
         <section className='min-h-screen'>
           <nav className='py-10 mb-12 flex justify-between'>
-            <div className='relative bg-gradient-to-b from-teal-500 rounded-md w-20 h-20 overflow-hidden'>
+            <div className='relative bg-gradient-to-b  rounded-md w-20 h-20 overflow-hidden'>
               <Image alt='myLogo' src={Logo} layout='fill' objectFit='cover' />
             </div>
             {/* <h1 className='font-burtons'>
@@ -55,9 +57,22 @@ export default function Home() {
             </p>
           </div>
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
-            <AiFillTwitterCircle />
-            <AiFillLinkedin />
-            <AiFillYoutube />
+            <Link href='https://twitter.com/CSarmientobaca'>
+              <AiFillTwitterCircle />
+            </Link>
+            <a>
+              <AiFillLinkedin />
+            </a>
+            <a>
+              <AiFillGithub />
+            </a>
+            {/* <Link href="../public/CarlosCV.pdf" target='_blank' rel='noopener noreferrer'>
+              Click here to download the PDF
+            </Link> */}
+            <a href="/pdf" target="_blank" >
+              Click here to view the PDF
+            </a>
+
           </div>
           <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 overflow-hidden'>
             <Image alt='myPhoto' src={me1} layout='fill' objectFit='cover' />
@@ -79,9 +94,16 @@ export default function Home() {
           </div>
           <div>
             <div>
-              <Card title={"Card1"} description={"description for card"} />
+              <Card title={"Card"} description={"description for card"} />
             </div>
           </div>
+
+        </section>
+
+        <section id='myGrid'
+          className='w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5'>
+          <Card1 title={"myCard1"} description={"this is the description form card1"} />
+          <Card1 title={"myCard2"} description={"this is the description form card2"} />
 
         </section>
       </main>
