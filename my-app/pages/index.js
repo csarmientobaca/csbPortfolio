@@ -50,10 +50,10 @@ export default function Home() {
               Carlos Sarmiento Baca
             </h2>
             <h3 className='text-2xl py-2'>
-              Developer and designer
+              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             </h3>
             <p className='text-md py-5 leading-8 text-gray-800'>
-              Junior Web Dev, always learning, because programing is a way of life.
+              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             </p>
           </div>
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
@@ -66,12 +66,12 @@ export default function Home() {
             <Link href={'https://github.com/csarmientobaca'}>
               <AiFillGithub />
             </Link>
-            {/* <Link href="../public/CarlosCV.pdf" target='_blank' rel='noopener noreferrer'>
-              Click here to download the PDF
-            </Link> */}
-            <a href="/pdf" target="_blank" >
-              Click here to view the PDF
-            </a>
+            <Link href="/pdf" target="_blank">
+              <div>
+                Click here to view the PDF
+              </div>
+            </Link>
+
 
           </div>
           <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 overflow-hidden'>
@@ -82,26 +82,22 @@ export default function Home() {
 
         <section>
           <div>
-            <h3 className='text-3xl py-1'>Services i offer</h3>
+            <h3 className='text-3xl py-1'>What I offer</h3>
             <p className='text-md py-2 leading-8 text-gray-800'>
-              Im new in this world, im pasionate and full of energy to learn a lot.
-              Right now i take any remote work and i could work even overseas.
+              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             </p>
             <p className='text-md py-2 leading-8 text-gray-800'>
-              Im a gamer, all my life was around games, pc, and programing. right now im taking the reins of my life and
-              in the programing world.
+              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             </p>
           </div>
-          <div>
-            <div>
-              <Card title={"Card"} description={"description for card"} />
-            </div>
-          </div>
-
         </section>
 
+        <h3 className='text-3xl py-1'>Projects</h3>
+
         <section id='myGrid'
+
           className='w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5'>
+
           <Card1 title={"myCard1"} description={"this is the description form card1"} />
           <Card1 title={"myCard2"} description={"this is the description form card2"} />
 

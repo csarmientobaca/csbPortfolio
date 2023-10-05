@@ -5,7 +5,7 @@ import meProva from '../public/logo.png'
 
 const Card1 = ({ title, description, source }) => {
     return (
-        <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+        <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-gray-900">
             <a href="#">
                 <Image className='h-80 w-72 object-cover rounded-t-xl' alt="product" src={meProva} />
                 <div className="px-4 py-3 w-72">
