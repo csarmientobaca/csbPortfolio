@@ -6,7 +6,7 @@ import { AiFillGithub, AiFillLinkedin, AiFillTwitterCircle, AiFillYoutube } from
 import Image from 'next/image'
 import me1 from "../public/me1.png"
 import Card from '@/components/Card'
-import Logo from "../public/csarmientobacaLogo.png"
+import Logo from "../public/logo.png"
 import Card1 from '@/components/Card1'
 import Link from 'next/link'
 
@@ -57,15 +57,15 @@ export default function Home() {
             </p>
           </div>
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
-            <Link href='https://twitter.com/CSarmientobaca'>
+            <Link href={'https://twitter.com/CSarmientobaca'}>
               <AiFillTwitterCircle />
             </Link>
-            <a>
+            <Link href={'https://www.linkedin.com/in/carlos-sarmiento-baca-64409bb6'}>
               <AiFillLinkedin />
-            </a>
-            <a>
+            </Link>
+            <Link href={'https://github.com/csarmientobaca'}>
               <AiFillGithub />
-            </a>
+            </Link>
             {/* <Link href="../public/CarlosCV.pdf" target='_blank' rel='noopener noreferrer'>
               Click here to download the PDF
             </Link> */}
@@ -77,7 +77,7 @@ export default function Home() {
           <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 overflow-hidden'>
             <Image alt='myPhoto' src={me1} layout='fill' objectFit='cover' />
           </div>
-        </section>
+        </section >
 
 
         <section>
@@ -106,7 +106,7 @@ export default function Home() {
           <Card1 title={"myCard2"} description={"this is the description form card2"} />
 
         </section>
-      </main>
+      </main >
 
 
     </div >

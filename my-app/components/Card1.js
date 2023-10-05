@@ -1,7 +1,7 @@
 // components/Card.js
 import React from 'react';
 import Image from 'next/image';
-import meProva from '../public/csarmientobacaLogo.png'
+import meProva from '../public/logo.png'
 
 const Card1 = ({ title, description, source }) => {
     return (
