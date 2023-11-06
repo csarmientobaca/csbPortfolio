@@ -4,17 +4,46 @@ import Head from 'next/head'
 import { BsFillMoonStarsFill } from 'react-icons/bs'
 import { AiFillGithub, AiFillLinkedin, AiFillTwitterCircle, AiFillYoutube } from 'react-icons/ai'
 import Image from 'next/image'
+
 import me1 from "../public/me1.png"
+import todo1 from "../public/todo1.png"
+import todo2 from "../public/todo2.png"
+import todo3 from "../public/todo3.png"
+
+
 import Card from '@/components/Card'
 import Logo from "../public/logo_in_FCE38A.png"
 import Card1 from '@/components/Card1'
 import Link from 'next/link'
 import NavFloating from '@/components/NavFloating'
+import { useEffect } from 'react'
+import { gsap } from "gsap";
+
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
 
 // const inter = Inter({ subsets: ['latin'] })
 
 
 export default function Home() {
+  const todoSet = [todo1, todo2, todo3];
+
+
+
+
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+  useEffect(() => {
+    document.getElementById("projectsLink").addEventListener("click", function () {
+      gsap.to(window, {
+        duration: 0.75,
+        scrollTo: "#myGrid"
+      })
+    })
+    return () => {
+    }
+  }, [])
+
   return (
     <div>
       <Head>
@@ -39,11 +68,15 @@ export default function Home() {
               </li>
 
               <li>
-                <a className='textMarmol px-4 py-2 rounded-md ml-8' href="#">Resume</a>
+                <a id='resume' className='textMarmol px-4 py-2 rounded-md ml-8' href="#">
+                  Resume
+                </a>
               </li>
 
               <li>
-                <a className='textMarmol px-4 py-2 rounded-md ml-8' href="#">Projects</a>
+                <a id='projectsLink' className='textMarmol px-4 py-2 rounded-md ml-8' href="#">
+                  Projects
+                </a>
               </li>
             </ul>
 
@@ -80,13 +113,11 @@ export default function Home() {
 
         <h3 className='text-3xl py-1'>Projects</h3>
 
-        <section id='myGrid'
-
-          className='w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5'>
-
-          <Card1 title={"myCard1"} description={"this is a todo app"} />
-          <Card1 title={"myCard2"} description={"this is the description form card2"} />
-
+        <section id='myGrid' className='w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5'>
+          <Card1 title={"Todo app with voice recognition"} description={"this is a todo app"}
+            sources={todoSet} />
+          <Card1 title={"Spotify with Spotify API (in progress)"} description={"this is the description for card2"}
+            sources={todoSet} />
         </section>
       </main >
 
