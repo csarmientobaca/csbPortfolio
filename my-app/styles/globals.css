@@ -2,8 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #F38181;
+  color: #EAFFD0;
+}
 
 @font-face {
   font-family: "burtons";
   src: url('../public/Burtons.otf');
+}
+
+.textMarmol{
+color: #EAFFD0;
+background-color: #FCE38A;
+}
+.bigOrange{
+  color: #FCE38A;
+}
+.bigGreen{
+  color: #95E1D3;
+}
+.bgGreen{
+  background-color: #FCE38A;
+}
+.bgTransparent{
+  background-color: #fce38a91;
+}
+
+
+.vertical-text {
+  transform: rotate(90deg);
 }
