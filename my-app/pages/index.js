@@ -2,13 +2,22 @@
 
 import Head from 'next/head'
 import { BsFillMoonStarsFill } from 'react-icons/bs'
-import { AiFillGithub, AiFillLinkedin, AiFillTwitterCircle, AiFillYoutube } from 'react-icons/ai'
 import Image from 'next/image'
 
 import me1 from "../public/me1.png"
 import todo1 from "../public/todo1.png"
 import todo2 from "../public/todo2.png"
 import todo3 from "../public/todo3.png"
+
+import spotify1 from "../public/spotify1.png";
+import spotify2 from "../public/spotify2.png";
+
+import linkedin1 from "../public/linkedin1.png"
+import linkedin2 from "../public/linkedin2.png"
+import linkedin3 from "../public/linkedin3.png"
+import linkedin4 from "../public/linkedin4.png"
+
+
 
 
 import Card from '@/components/Card'
@@ -27,6 +36,9 @@ import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
 
 export default function Home() {
   const todoSet = [todo1, todo2, todo3];
+  const spotifySet = [spotify1, spotify2];
+  const linkedinSet = [linkedin1, linkedin2, linkedin3, linkedin4];
+
 
 
 
@@ -56,25 +68,25 @@ export default function Home() {
       <main className='px-10'>
         <section className='min-h-screen'>
           <nav className='py-10 mb-12 flex justify-between'>
-            <div className='relative bg-gradient-to-b  rounded-md w-20 h-20 overflow-hidden'>
+            <div className='relative bg-gradient-to-b  rounded-md w-28 h-28 overflow-hidden'>
               <Image alt='myLogo' src={Logo} layout='fill' objectFit='cover' />
             </div>
             {/* <h1 className='font-burtons'>
               Developed by csarmientobaca
             </h1> */}
             <ul className='flex items-center'>
-              <li>
+              {/* <li>
                 <BsFillMoonStarsFill className='cursor-pointer text-2xl' />
-              </li>
+              </li> */}
 
               <li>
-                <a id='resume' className='textMarmol px-4 py-2 rounded-md ml-8' href="#">
+                <a id='resume' className='textMarmol px-5 py-4 text-2xl rounded-md ml-8' href="#">
                   Resume
                 </a>
               </li>
 
               <li>
-                <a id='projectsLink' className='textMarmol px-4 py-2 rounded-md ml-8' href="#">
+                <a id='projectsLink' className='textMarmol px-5 py-4 text-2xl rounded-md ml-8' href="#">
                   Projects
                 </a>
               </li>
@@ -114,10 +126,20 @@ export default function Home() {
         <h3 className='text-3xl py-1'>Projects</h3>
 
         <section id='myGrid' className='w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5'>
-          <Card1 title={"Todo app with voice recognition"} description={"this is a todo app"}
-            sources={todoSet} />
-          <Card1 title={"Spotify with Spotify API (in progress)"} description={"this is the description for card2"}
-            sources={todoSet} />
+          <Card1 title={"Todo app with voice recognition  "} description={"this is a todo app consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"}
+            sources={todoSet} youtube={"http://youtu.be/INe5cxhGYak"} link={"http://todo-app-nextjs-8edab.web.app"}
+          />
+          <Card1 title={"Spotify w/ Spotify API(in progress)"} description={"Clone di Spotify utilizzando l'API di Spotify per creare una mia versione personale."}
+            sources={spotifySet} youtube={"http://youtu.be/v6DOdeozrJ0"} link={"https://github.com/csarmientobaca/spotify_clone_with_api"}
+          />
+          <Card1 title={"Impero romano con python e flask"} description={`App interattiva sull'Impero Romano con funzionalità di ricerca, filtri,
+visualizzazione dati storici e utilizzo dell'API di Mapbox`}
+            sources={spotifySet} youtube={"#"} link={"https://github.com/csarmientobaca/capstone_epicode"}
+          />
+          <Card1 title={"Clone di LinkedIn con Bootstrap e React:"} description={`Sviluppo di piattaforma professionale con registrazione, profili,
+condivisione di contenuti, design reattivo, creazione di Problem solving, componenti complessi e gestione interazioni utente`}
+            sources={linkedinSet} youtube={"#"} link={"https://github.com/369-Palma/build-week3-team6new"}
+          />
         </section>
       </main >
 

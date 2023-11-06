@@ -33,3 +33,8 @@ background-color: #FCE38A;
 .vertical-text {
   transform: rotate(90deg);
 }
+
+.bigInvert{
+  background-color: #95E1D3;
+  color: #a29772;
+}
