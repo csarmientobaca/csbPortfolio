@@ -17,8 +17,13 @@ import linkedin2 from "../public/linkedin2.png"
 import linkedin3 from "../public/linkedin3.png"
 import linkedin4 from "../public/linkedin4.png"
 
+import rome from "../public/rome.png"
 
-
+import java from "../public/java.png"
+import js from "../public/js.png"
+import next from "../public/next.png"
+import react from "../public/react.png"
+import spring from "../public/spring.png"
 
 import Card from '@/components/Card'
 import Logo from "../public/logo_in_FCE38A.png"
@@ -38,8 +43,7 @@ export default function Home() {
   const todoSet = [todo1, todo2, todo3];
   const spotifySet = [spotify1, spotify2];
   const linkedinSet = [linkedin1, linkedin2, linkedin3, linkedin4];
-
-
+  const romeSet = [rome]
 
 
 
@@ -76,13 +80,15 @@ export default function Home() {
             </h1> */}
             <ul className='flex items-center'>
               {/* <li>
-                <BsFillMoonStarsFill className='cursor-pointer text-2xl' />
+                <a onClick={openWhatsApp}>
+                  wassap
+                </a>
               </li> */}
 
               <li>
-                <a id='resume' className='textMarmol px-5 py-4 text-2xl rounded-md ml-8' href="#">
+                <Link className='textMarmol px-5 py-4 text-2xl rounded-md ml-8' href='/pdf'>
                   Resume
-                </a>
+                </Link>
               </li>
 
               <li>
@@ -98,11 +104,29 @@ export default function Home() {
               Carlos Sarmiento Baca
             </h2>
             <h3 className='text-2xl py-2'>
-              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            </h3>
+              Sono uno sviluppatore junior fullstack con una solida competenza in linguaggi come JavaScript e Java,
+              ho anche avuto l`opportunità di sperimentare con linguaggi come Python.
+              La mia passione per la programmazione mi ha portato a esplorare diversi aspetti dello sviluppo web.</h3>
             <p className='text-md py-5 leading-8'>
-              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              Peruviano / Madrelingua Spagnolo / Inglese
             </p>
+          </div>
+          <div className='flex items-center justify-center  space-x-4' >
+            <Image className='w-32 h-32' src={react} alt='reactlogo'>
+
+            </Image>
+            <Image className='w-32 h-32' src={next} alt='nextjslogo'>
+
+            </Image>
+            <Image className='w-32 h-32' src={js} alt='jslogo'>
+
+            </Image>
+            <Image className='w-32 h-32' src={java} alt='javalogo'>
+
+            </Image>
+            {/* <Image className='w-32 h-32' src={spring} alt='springlogo'>
+
+            </Image> */}
           </div>
 
           <div className='relative mx-auto bg-gradient-to-r from-pink-400 to-orange-400 rounded-full w-80 h-80 overflow-hidden'>
@@ -113,19 +137,26 @@ export default function Home() {
 
         <section>
           <div>
-            <h3 className='text-3xl py-1'>What I offer</h3>
+
+            <h3 className='text-3xl py-1 my-5'>Se mi chiedeste cosa posso offrire alla vostra azienda, la mia risposta sarebbe la seguente:</h3>
             <p className='text-md py-2 leading-8'>
-              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              Non posso offrire un lungo elenco di anni di esperienza lavorativa, ma posso garantirvi una carica di energia, determinazione e una sete insaziabile di apprendimento.
             </p>
             <p className='text-md py-2 leading-8'>
-              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+
+
+              La mancanza di esperienza può essere colmata con l`impegno e la dedizione, e sono determinato a farlo.
+              Sono convinto che con il mio desiderio di apprendere e la mia predisposizione <br></br>a collaborare con il team,
+              posso diventare un elemento prezioso per la vostra azienda.
+              Sono pronto a lavorare duramente per raggiungere gli
+              obiettivi aziendali e per crescere professionalmente lungo il percorso.
             </p>
           </div>
         </section>
 
-        <h3 className='text-3xl py-1'>Projects</h3>
+        <h3 className='text-3xl py-1 my-10'>Projects</h3>
 
-        <section id='myGrid' className='w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5'>
+        <section id='myGrid' className='w-fit mx-auto grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5'>
           <Card1 title={"Todo app with voice recognition  "} description={"this is a todo app consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"}
             sources={todoSet} youtube={"http://youtu.be/INe5cxhGYak"} link={"http://todo-app-nextjs-8edab.web.app"}
           />
@@ -134,13 +165,20 @@ export default function Home() {
           />
           <Card1 title={"Impero romano con python e flask"} description={`App interattiva sull'Impero Romano con funzionalità di ricerca, filtri,
 visualizzazione dati storici e utilizzo dell'API di Mapbox`}
-            sources={spotifySet} youtube={"#"} link={"https://github.com/csarmientobaca/capstone_epicode"}
+            sources={romeSet} youtube={"#"} link={"https://github.com/csarmientobaca/capstone_epicode"}
           />
           <Card1 title={"Clone di LinkedIn con Bootstrap e React:"} description={`Sviluppo di piattaforma professionale con registrazione, profili,
 condivisione di contenuti, design reattivo, creazione di Problem solving, componenti complessi e gestione interazioni utente`}
             sources={linkedinSet} youtube={"#"} link={"https://github.com/369-Palma/build-week3-team6new"}
           />
         </section>
+
+        {/* <section>
+          <h3 className='text-3xl py-1'>Contatti</h3>
+
+
+
+        </section> */}
       </main >
 
 
