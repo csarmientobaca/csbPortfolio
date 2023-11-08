@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 body {
   background-color: #F38181;
   color: #EAFFD0;
@@ -28,8 +30,6 @@ background-color: #FCE38A;
 .bgTransparent{
   background-color: #fce38a91;
 }
-
-
 .vertical-text {
   transform: rotate(90deg);
 }
@@ -38,3 +38,4 @@ background-color: #FCE38A;
   background-color: #95E1D3;
   color: #a29772;
 }
+

@@ -35,7 +35,7 @@ const Intro = () => {
         <div className="relative z-50" ref={comp}>
             <div
                 id="intro-slider"
-                className="textMarmol h-screen p-10 absolute top-0 left- z-40 w-full flex flex-col gap-10 tracking-tight"
+                className="textMarmol p-10 absolute top-0 left-0 z-40 w-full flex flex-col gap-10 tracking-tight h-screen sm:h-auto"
             >
                 <h1 className="text-9xl" id="title-1">
                     Full-Stack Web Developer
