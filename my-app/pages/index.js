@@ -155,9 +155,9 @@ export default function Home() {
                 <h3>
                   {language === 'it'
                     ?
-                    `Madrelingua`
+                    `Madrelingua `
                     :
-                    `Native Speaker`
+                    `Native Speaker `
                   }
                   < Image
                     className='py-2 inline-block h-14 w-14'
@@ -166,9 +166,9 @@ export default function Home() {
                 <h3>
                   {language === 'it'
                     ?
-                    `Fluente`
+                    `Fluente `
                     :
-                    `Fluent`
+                    `Fluent `
                   }
                   < Image
                     className='inline-block h-14 w-14'
