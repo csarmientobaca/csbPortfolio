@@ -166,9 +166,9 @@ export default function Home() {
                 <h3>
                   {language === 'it'
                     ?
-                    `fluente`
+                    `Fluente`
                     :
-                    `fluent`
+                    `Fluent`
                   }
                   < Image
                     className='inline-block h-14 w-14'
