@@ -3,6 +3,11 @@
 //mettere tutte le competenze
 //imagine a canto alle domande 
 //disegni piu chiari
+
+//aprire una nuova scheda ogni volta che clicko un link
+//aggiungere funny frases
+// ordinare i sottotitoli
+
 import Head from 'next/head'
 import Image from 'next/image'
 import me1 from "../public/me1.png"
@@ -99,7 +104,6 @@ export default function Home() {
                   Projects
                 </Link>
               </li>
-
             </ul>
             <button
               onClick={toggleLanguage}
@@ -109,9 +113,6 @@ export default function Home() {
                 className='relative p-0 h-20 w-20 rounded-full' alt='eng' />
             </button>
           </nav>
-
-
-
           <div className='text-center p-10'>
             <h1 className='bigOrange text-5xl py-2 font-medium'>
               Carlos Sarmiento Baca
@@ -132,59 +133,37 @@ export default function Home() {
               }
             </h3>
 
-            <div className='flex flex-wrap justify-center xl:justify-between'>
-              <div className='w-full xl:w-1/2'>
-                <h3 className='text-xl '>
-                  {language === 'it'
-                    ? `Di `
-                    : `FROM `}
-                  < Image
-                    className='inline-block h-14 w-14'
-                    src={peru} alt='peru' />
+            <div className='flex flex-wrap sm:justify-center  space-x-20'>
+
+              <div className='my-16 w-14 h-14 mb-4 group relative cursor-pointer transition-transform transform hover:scale-105 flex flex-col items-center'>
+                <h3 className='text-center text-xl group-hover:text-2xl font-burtons transition-transform mb-1'>
+                  {language === 'it' ? `Di` : `From`}
                 </h3>
+                <Image className='text-center' src={peru} alt="peru" layout='responsive' loading='eager' />
               </div>
-              <div className='w-full xl:w-1/2'>
-                <h3 className='text-xl'>
-                  {language === 'it'
-                    ?
-                    `Lingue: `
-                    :
-                    `Languages: `
-                  }
+
+              <div className='my-16 w-14 h-14 mb-4 group relative cursor-pointer transition-transform transform hover:scale-105 flex flex-col items-center'>
+                <h3 className='text-center text-xl group-hover:text-2xl font-burtons transition-transform mb-1'>
+                  {language === 'it' ? `Madrelingua` : `Native Speaker`}
                 </h3>
-                <h3>
-                  {language === 'it'
-                    ?
-                    `Madrelingua `
-                    :
-                    `Native Speaker `
-                  }
-                  < Image
-                    className='py-2 inline-block h-14 w-14'
-                    src={spa} alt='spa' />
+                <Image className='text-center' src={spa} alt="peru" layout='responsive' loading='eager' />
+              </div>
+
+              <div className='my-16 w-14 h-14 mb-4 group relative cursor-pointer transition-transform transform hover:scale-105 flex flex-col items-center'>
+                <h3 className='text-center text-xl group-hover:text-2xl font-burtons transition-transform mb-1'>
+                  {language === 'it' ? `Fluente` : `Fluent`}
                 </h3>
-                <h3>
-                  {language === 'it'
-                    ?
-                    `Fluente `
-                    :
-                    `Fluent `
-                  }
-                  < Image
-                    className='inline-block h-14 w-14'
-                    src={ita} alt='ita' />
-                </h3>
-                <h3>
+                <Image className='text-center' src={ita} alt="peru" layout='responsive' loading='eager' />
+              </div>
+
+              <div className='my-16 w-14 h-14 mb-4 group relative cursor-pointer transition-transform transform hover:scale-105 flex flex-col items-center'>
+                <h3 className='text-center text-xl group-hover:text-2xl font-burtons transition-transform mb-1'>
                   B-2
-                  <Image
-                    className='inline-block h-14 w-14'
-                    src={eng} alt='eng' />
                 </h3>
-
+                <Image className='text-center' src={eng} alt="peru" layout='responsive' loading='eager' />
               </div>
+
             </div>
-
-
 
           </div>
           <Skills />
@@ -205,26 +184,22 @@ export default function Home() {
             <p className='text-md py-2 leading-8'>
               {language === 'it'
                 ?
-                `Non posso offrire un lungo elenco di anni di esperienza lavorativa,
-                ma posso garantirvi una carica di energia,
+                `Posso garantirvi una carica di energia,
                 determinazione e una sete insaziabile di apprendimento.`
                 :
-                `I can't offer a long list of years of work experience, 
-                but I can guarantee you a charge of energy, 
+                `I can guarantee you a charge of energy, 
                 determination, and an insatiable thirst for learning.`
               }
             </p>
             <p className='text-md py-2 leading-8'>
               {language === 'it'
                 ?
-                `La mancanza di esperienza può essere colmata con l'impegno e la dedizione,
-                e sono determinato a farlo. Sono convinto che con il mio desiderio di apprendere e la mia predisposizione
+                `Sono convinto che con il mio desiderio di apprendere e la mia predisposizione
                 a collaborare con il team, posso diventare un elemento prezioso per la vostra azienda.
                 Sono pronto a lavorare duramente per raggiungere gli obiettivi aziendali e per crescere professionalmente lungo il percorso.
                 `
                 :
-                `The lack of experience can be filled with commitment and dedication, and I am determined to do so. 
-                I am convinced that with my desire to learn and my willingness to collaborate with the team, 
+                `I am convinced that with my desire to learn and my willingness to collaborate with the team, 
                 I can become a valuable asset to your company. 
                 I am ready to work hard to achieve the company's goals and to grow professionally along the way.`
               }
