@@ -5,8 +5,13 @@
 
 
 body {
-  background-color: #F38181;
-  color: #EAFFD0;
+  background-color: #393E46;
+  color: #EEEEEE;
+  padding: 0;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -15,27 +20,37 @@ body {
 }
 
 .textMarmol{
-color: #EAFFD0;
-background-color: #FCE38A;
+color: #EEEEEE;
+background-color: #222831;
 }
 .bigOrange{
-  color: #FCE38A;
+  color: #00ADB5;
 }
 .bigGreen{
-  color: #95E1D3;
+  color: #EEEEEE;
 }
 .bgGreen{
   background-color: #FCE38A;
 }
 .bgTransparent{
-  background-color: #fce38a91;
+  background-color: #00ADB5;
 }
 .vertical-text {
   transform: rotate(90deg);
 }
 
 .bigInvert{
-  background-color: #95E1D3;
-  color: #a29772;
+  background-color: #222831;
+  color: #EEEEEE;
 }
 
+.textmovie{
+  display: inline-flex;
+  align-items: normal;
+  background: url("https://media.giphy.com/media/unQ3IJU2RG7DO/giphy.gif");
+  background-position: 0%;
+  background-size: 20vw;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}

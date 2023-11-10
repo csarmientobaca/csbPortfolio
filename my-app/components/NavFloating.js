@@ -7,7 +7,7 @@ import { FaFilePdf } from 'react-icons/fa'
 
 const NavFloating = () => {
     return (
-        <div>
+        <>
             <nav className=' flex flex-col items-center 
             xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto 
             xl:righ-[%2] z-20 top-0 w-full 
@@ -34,7 +34,7 @@ const NavFloating = () => {
                 </div>
             </nav>
 
-        </div>
+        </>
     )
 }
 export default NavFloating;

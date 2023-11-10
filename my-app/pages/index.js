@@ -5,7 +5,6 @@
 //imagine a canto alle domande 
 //disegni piu chiari
 
-
 import Head from 'next/head'
 import Image from 'next/image'
 
@@ -23,34 +22,27 @@ import linkedin3 from "../public/linkedin3.png"
 import linkedin4 from "../public/linkedin4.png"
 
 import rome from "../public/rome.png"
-
-import java from "../public/java.png"
-import js from "../public/js.png"
-import next from "../public/next.png"
-import react from "../public/react.png"
-import spring from "../public/spring.png"
-import css3 from "../public/css3.png"
-import html5 from "../public/html5.png"
-import bootstrap from "../public/bootstrap.png"
-
-
-import Card from '@/components/Card'
 import Logo from "../public/logo_in_FCE38A.png"
 import Card1 from '@/components/Card1'
 import Link from 'next/link'
 import NavFloating from '@/components/NavFloating'
-import { useEffect } from 'react'
+import Skills from '@/components/Skills'
+import { useEffect, useState } from 'react'
 import { gsap } from "gsap";
 
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
 import Intro from '@/components/Intro'
 import { FaBootstrap, FaCss3 } from 'react-icons/fa'
+import { AiFillLinkedin, AiFillTwitterCircle, AiFillYoutube } from 'react-icons/ai'
 
 // const inter = Inter({ subsets: ['latin'] })
 
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
+
+
   const todoSet = [todo1, todo2, todo3];
   const spotifySet = [spotify1, spotify2];
   const linkedinSet = [linkedin1, linkedin2, linkedin3, linkedin4];
@@ -60,57 +52,53 @@ export default function Home() {
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-  useEffect(() => {
-    document.getElementById("projectsLink").addEventListener("click", function () {
-      gsap.to(window, {
-        duration: 0.75,
-        scrollTo: "#myGrid"
-      })
-    })
-    return () => {
-    }
-  }, [])
+  // useEffect(() => {
+  //   document.getElementById("projectsLink").addEventListener("click", function () {
+  //     gsap.to(window, {
+  //       duration: 0.75,
+  //       scrollTo: "#myGrid"
+  //     })
+  //   })
+  //   return () => {
+  //   }
+  // }, [])
 
   return (
-    <>
+    <div className={darkMode ? "dark" : ""}>
       <Head>
         <title>
           my next js page
         </title>
       </Head>
-      <Intro />
       <NavFloating />
-      <nav className='py-10 px-10 mb-12 flex lg:justify-between justify-center'>
-        <div className='relative rounded-md w-28 h-28 hidden lg:block'>
-          <Image alt='myLogo' src={Logo} layout='fill' objectFit='cover' />
-        </div>
-
-        <ul className='flex items-center'>
-          {/* <li>
-                <a onClick={openWhatsApp}>
-                  wassap
-                </a>
-              </li> */}
-
-          <li>
-            <Link className='textMarmol px-5 py-4 text-2xl rounded-md ml-8' href='/pdf'>
-              Resume
-            </Link>
-          </li>
-
-          <li>
-            <a id='projectsLink' className='textMarmol px-5 py-4 text-2xl rounded-md ml-8' href="#">
-              Projects
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <main className='px-10 '>
+      <main className='px-10 flex-wrap'>
         <section className='min-h-screen'>
+          <nav className='py-10 px-10 mb-12 flex flex-wrap lg:justify-between justify-center'>
+            <div className='relative rounded-md w-28 h-28 lg:block flex-shrink-0 my-10'>
+              <Image alt='myLogo' src={Logo} layout='fill' objectFit='cover' />
+            </div>
+
+            <ul className='flex items-center'>
+              <li>
+                <Link className='textMarmol px-5 py-4 text-2xl rounded-md ml-8' href='/pdf'>
+                  Resume
+                </Link>
+              </li>
+
+              <li>
+                <Link id='projectsLink' className='textMarmol px-5 py-4 text-2xl rounded-md ml-8' href="#">
+                  Projects
+                </Link>
+              </li>
+            </ul>
+          </nav>
           <div className='text-center p-10'>
-            <h2 className='bigOrange text-5xl py-2 font-medium'>
+            <h1 className='bigOrange text-5xl py-2 font-medium'>
               Carlos Sarmiento Baca
-            </h2>
+            </h1>
+            <h1 className='textmovie text-5xl'>
+              Full-stack Developer
+            </h1>
             <h3 className='text-2xl py-2'>
               Sono uno sviluppatore junior fullstack con una solida competenza in linguaggi come JavaScript e Java,
               ho anche avuto l`opportunità di sperimentare con linguaggi come Python.
@@ -119,63 +107,37 @@ export default function Home() {
               Peruviano / Madrelingua Spagnolo / Inglese
             </p>
           </div>
-          <div id='logos' className='flex flex-wrap justify-center space-x-4'>
-            <div className='w-32 h-32 mb-4'>
-              <Image src={react} alt='reactlogo' layout='responsive' width={128} height={128} />
-            </div>
-            <div className='w-32 h-32 mb-4'>
-              <Image src={next} alt='nextjslogo' layout='responsive' width={128} height={128} />
-            </div>
-            <div className='w-32 h-32 mb-4'>
-              <Image src={js} alt='jslogo' layout='responsive' width={128} height={128} />
-            </div>
-            <div className='w-32 h-32 mb-4'>
-              <Image src={java} alt='javalogo' layout='responsive' width={128} height={128} />
-            </div>
-            <div className='w-32 h-32 mb-4'>
-              <Image src={spring} alt='springlogo' layout='responsive' width={128} height={128} />
-            </div>
-            <div className='w-32 h-32 mb-4'>
-              <Image src={bootstrap} alt='Bootstrap' layout='responsive' width={128} height={128} />
-            </div>
-            <div className='w-32 h-32 mb-4'>
-              <Image src={css3} alt='css3' layout='responsive' width={128} height={128} />
-            </div>
-            <div className='w-32 h-32 mb-4'>
-              <Image src={html5} alt='html5' layout='responsive' width={128} height={128} />
-            </div>
-          </div>
+
+          <Skills />
 
 
-          <div className='relative mx-auto bg-gradient-to-r from-pink-400 to-orange-400 rounded-full w-80 h-80 overflow-hidden'>
-            <Image alt='myPhoto' src={me1} layout='fill' objectFit='cover' />
-          </div>
         </section >
 
-
-        <section>
-          <div>
-
+        {/* SECOND SECTION */}
+        <section className="flex flex-col items-center md:flex-row md:items-center justify-center">
+          <div className="max-w-md md:mr-8">
             <h3 className='text-3xl py-1 my-5'>Se mi chiedeste cosa posso offrire alla vostra azienda, la mia risposta sarebbe la seguente:</h3>
             <p className='text-md py-2 leading-8'>
               Non posso offrire un lungo elenco di anni di esperienza lavorativa, ma posso garantirvi una carica di energia, determinazione e una sete insaziabile di apprendimento.
             </p>
             <p className='text-md py-2 leading-8'>
-
-
-              La mancanza di esperienza può essere colmata con l`impegno e la dedizione, e sono determinato a farlo.
-              Sono convinto che con il mio desiderio di apprendere e la mia predisposizione <br></br>a collaborare con il team,
-              posso diventare un elemento prezioso per la vostra azienda.
-              Sono pronto a lavorare duramente per raggiungere gli
-              obiettivi aziendali e per crescere professionalmente lungo il percorso.
+              La mancanza di esperienza può essere colmata con l`impegno e la dedizione, e sono determinato a farlo. Sono convinto che con il mio desiderio di apprendere e la mia predisposizione <br></br>a collaborare con il team, posso diventare un elemento prezioso per la vostra azienda. Sono pronto a lavorare duramente per raggiungere gli obiettivi aziendali e per crescere professionalmente lungo il percorso.
             </p>
+          </div>
+          <div className='relative mx-auto bg-gradient-to-r from-pink-400 to-orange-400 rounded-full w-80 h-80 overflow-hidden md:flex-shrink-0'>
+            <Image alt='myPhoto' src={me1} layout='fill' objectFit='cover' />
           </div>
         </section>
 
+
+
+
         <h3 className='text-3xl py-1 my-10'>Projects</h3>
 
+
+        {/* THIRD SECTION */}
         <section id='myGrid'
-          className='grid grid-cols-1 lg:grid-cols-2 
+          className=' grid grid-cols-1 lg:grid-cols-2 
           md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5'>
 
           <Card1 title={"Todo app with voice recognition  "}
@@ -206,11 +168,8 @@ export default function Home() {
             link={"https://github.com/369-Palma/build-week3-team6new"}
           />
         </section>
+
       </main >
-    </>
-
-
-
-
+    </div >
   )
 }

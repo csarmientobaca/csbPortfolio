@@ -24,7 +24,7 @@ const Intro = () => {
                     stagger: 0.1,
                 })
                 .to("#intro-slider", {
-                    xPercent: "-100",
+                    xPercent: "-200",
                     duration: 0.6,
                 })
         }, comp)
@@ -32,29 +32,30 @@ const Intro = () => {
         return () => ctx.revert()
     }, [])
     return (
-        <div className="relative z-50" ref={comp}>
+        <div className="relative z-50" ref={comp} >
             <div
                 id="intro-slider"
-                className="textMarmol p-10 absolute top-0 left-0 z-40 w-full flex flex-col gap-10 tracking-tight h-screen sm:h-auto"
+                className="p-10 absolute top-0 left-0 z-40 w-full flex flex-col gap-10 tracking-tight h-screen sm:h-auto"
             >
-                <h1 className="text-9xl" id="title-1">
+                <h1 className="textMarmol text-9xl rounded-2xl p-1" id="title-1">
                     Full-Stack Web Developer
                 </h1>
-                <h1 className="text-9xl" id="title-2">
+                <h1 className="textMarmol text-9xl rounded-2xl p-1" id="title-2">
                     Perito Informatico
                 </h1>
                 <div className="flex-1 flex items-end " id="title-3">
-                    <h1 className="-top-16 -right-72 divide-y divide-transparent text-9xl self-end transform rotate-90 absolute" >
+                    <h1 className="textMarmol rounded-2xl p-1 -top-16 -right-72 divide-y divide-transparent text-9xl self-end transform rotate-90 absolute" >
                         React/Nextjs
                     </h1>
                 </div>
-                <h1 className="text-9xl absolute bottom-10" id="title-4">
+
+                <h1 className="textMarmol text-9xl rounded-2xl p-1 absolute -bottom-52" id="title-4">
                     Java
                 </h1>
-                <h1 className="text-9xl relative bottom-40" id="title-5">
+                <h1 className="textMarmol h-auto w-full my-10 text-9xl rounded-2xl p-1 relative -bottom-96" id="title-5">
                     Javascript
                 </h1>
-                <h1 className="text-9xl absolute bottom-96  " id="title-6">
+                <h1 className="textMarmol text-9xl rounded-2xl p-1 absolute bottom-50  " id="title-6">
                     Tailwind/Bootstrap
                 </h1>
             </div>
