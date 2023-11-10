@@ -84,7 +84,9 @@ export default function Home() {
         <section className='min-h-screen'>
           <nav className='py-10 mb-12 flex flex-wrap lg:justify-between justify-center'>
             <div className='relative rounded-full w-28 h-28 lg:block flex-shrink-0 my-10 overflow-hidden'>
-              <Image alt='myLogo' src={Logo} layout='fill' objectFit='cover' />
+              <Link href={"https://github.com/csarmientobaca"}>
+                < Image alt='myLogo' src={Logo} layout='fill' objectFit='cover' />
+              </Link>
             </div>
             <ul className='flex flex-col lg:flex-row items-center '>
               <li className='m-10'>
