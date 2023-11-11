@@ -48,15 +48,17 @@ const Intro = () => {
                         React/Nextjs
                     </h1>
                 </div>
-
-                <h1 className=" text-9xl rounded-2xl p-1 absolute bottom-52" id="title-4">
+                <h1 className=" text-6xl rounded-2xl p-1 absolute bottom-60  " id="title-6">
+                    Bootstrap
+                </h1>
+                <h1 className=" text-3xl rounded-2xl p-1 absolute bottom-52" id="title-4">
                     Java
                 </h1>
-                <h1 className=" h-auto w-full my-10 text-9xl rounded-2xl p-1 relative " id="title-5">
+                <h1 className=" h-auto w-full my-10 text-3xl p-1 relative " id="title-5">
                     Javascript
                 </h1>
                 <h1 className=" text-9xl rounded-2xl p-1 absolute bottom-0  " id="title-6">
-                    Tailwind/Bootstrap
+                    Tailwind
                 </h1>
             </div>
 

@@ -88,7 +88,7 @@ export default function Home() {
 
   const timer = setTimeout(() => {
     setShowMain(true);
-  }, 3500);
+  }, 3700);
 
 
   return (
@@ -206,7 +206,7 @@ export default function Home() {
 
               <div className='text-center group relative h-20 w-20'>
                 <h3 className='text-lg group-hover:text-md font-burtons transition-transform mb-1'>
-                  B2
+                  {language === 'it' ? `Fluente` : `Fluent`}
                 </h3>
                 <div className='group-hover:visible invisible absolute top-full left-1/2 transform -translate-x-1/2 -mt-2 bg-gray-800 text-white text-xs p-1 rounded'>
                   <p className='text-lg'>
@@ -266,7 +266,7 @@ export default function Home() {
 
 
 
-        <h3 className='text-3xl py-1 my-10'>
+        <h3 className='text-center py-5 text-3xl  my-10'>
           Projects
         </h3>
 
