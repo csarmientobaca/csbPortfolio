@@ -12,6 +12,10 @@ import postgreSQL from "../public/postgreSQL.png"
 import visualstudiocode from "../public/visualstudiocode.png"
 import git from "../public/git.png"
 import github from "../public/github.png"
+import tailwind from "../public/tailwind.png"
+import redux from "../public/redux.png"
+import python from "../public/python.png"
+import flask from "../public/flask.png"
 
 
 
@@ -32,7 +36,11 @@ const Skills = () => {
                 { image: postgreSQL, alt: 'postgreSQL', title: 'postgreSQL' },
                 { image: visualstudiocode, alt: 'visualstudio', title: 'VisualStudioCode' },
                 { image: github, alt: 'github', title: 'Github' },
-                { image: git, alt: 'git', title: 'git' }
+                { image: git, alt: 'git', title: 'git' },
+                { image: tailwind, alt: 'tailwind', title: 'tailwind' },
+                { image: redux, alt: 'redux', title: 'redux' },
+                { image: python, alt: 'python', title: 'python' },
+                { image: flask, alt: 'flask', title: 'flask' },
 
 
             ].map((item, index) => (

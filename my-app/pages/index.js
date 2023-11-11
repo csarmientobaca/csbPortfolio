@@ -33,6 +33,7 @@ import ita from "../public/ita.png"
 import peru from "../public/peru.png"
 import spa from "../public/spa.png"
 
+import github from "../public/github.png"
 
 
 import rome from "../public/rome.png"
@@ -47,7 +48,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
 import Intro from '@/components/Intro'
-import { AiFillLinkedin, AiFillTwitterCircle, AiFillYoutube } from 'react-icons/ai'
+import { AiFillCopyrightCircle, AiFillLinkedin, AiFillTwitterCircle, AiFillYoutube } from 'react-icons/ai'
+import { FaGithub } from 'react-icons/fa'
+import { LiaCopyrightSolid } from "react-icons/lia"
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -55,6 +58,7 @@ import { AiFillLinkedin, AiFillTwitterCircle, AiFillYoutube } from 'react-icons/
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [language, setLanguage] = useState('it'); // 'it' for Italian, 'en' for English
+  const [showMain, setShowMain] = useState(false);
 
   const toggleLanguage = () => {
     setLanguage((prevLanguage) => (prevLanguage === 'it' ? 'en' : 'it'));
@@ -82,15 +86,22 @@ export default function Home() {
     }
   }, [])
 
+  const timer = setTimeout(() => {
+    setShowMain(true);
+  }, 3500);
+
+
   return (
-    <div className={darkMode ? "dark" : ""}>
+
+    <div >
       <Head>
-        <title>
-          my next js page
-        </title>
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <title>Carlos Sarmiento Baca Portfolio</title>
       </Head>
-      <NavFloating />
-      <main className='px-10 flex-wrap'>
+      <Intro />
+      <main className={`px-10 flex-wrap ${showMain ? 'visible' : 'hidden'}`}>
+        <NavFloating />
+
         <section className=''>
           <nav className=' flex flex-wrap lg:justify-between justify-center'>
             <div className='relative rounded-full w-28 h-28 lg:block flex-shrink-0 my-10 overflow-hidden'>
@@ -162,7 +173,7 @@ export default function Home() {
 
               <div className='text-center group relative h-20 w-20'>
                 <h3 className='text-lg group-hover:text-md font-burtons transition-transform mb-1'>
-                  {language === 'it' ? `Madrelingua` : `Native`}
+                  {language === 'it' ? `Madrelingua` : `FirtsLanguage`}
                 </h3>
                 <div className='group-hover:visible invisible absolute top-full left-1/2 transform -translate-x-1/2 -mt-2 bg-gray-800 text-white text-xs p-1 rounded'>
                   <p className='text-lg'>
@@ -329,6 +340,18 @@ export default function Home() {
             youtube={"http://youtu.be/v6DOdeozrJ0"}
             link={"https://github.com/csarmientobaca/spotify_clone_with_api"}
           />
+        </section>
+        <section className='flex flex-col justify-center items-center mb-20'>
+          <h3>Source code</h3>
+          <Link href={'https://github.com/csarmientobaca/csbPortfolio/tree/main/my-app'}>
+            <Image className='h-10 w-10' src={github} alt='github' />
+          </Link>
+          <div>
+            <LiaCopyrightSolid className='inline' />
+            <h3 className='inline'>
+              Carlos Sarmiento Baca
+            </h3>
+          </div>
         </section>
 
       </main >
