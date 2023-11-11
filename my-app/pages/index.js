@@ -23,6 +23,11 @@ import linkedin2 from "../public/linkedin2.png"
 import linkedin3 from "../public/linkedin3.png"
 import linkedin4 from "../public/linkedin4.png"
 
+import spotifyVanilla1 from "../public/spotyvanilla1.png";
+import spotifyVanilla2 from "../public/spotyvanilla2.png";
+import spotifyVanilla3 from "../public/spotyvanilla3.png";
+
+
 import eng from "../public/eng.png"
 import ita from "../public/ita.png"
 import peru from "../public/peru.png"
@@ -42,7 +47,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
 import Intro from '@/components/Intro'
-import { FaBootstrap, FaCss3 } from 'react-icons/fa'
 import { AiFillLinkedin, AiFillTwitterCircle, AiFillYoutube } from 'react-icons/ai'
 
 // const inter = Inter({ subsets: ['latin'] })
@@ -62,6 +66,7 @@ export default function Home() {
   const spotifySet = [spotify1, spotify2];
   const linkedinSet = [linkedin1, linkedin2, linkedin3, linkedin4];
   const romeSet = [rome]
+  const spotifyVanillaSet = [spotifyVanilla1, spotifyVanilla2, spotifyVanilla3]
 
 
 
@@ -271,18 +276,18 @@ export default function Home() {
             sources={todoSet} youtube={"http://youtu.be/INe5cxhGYak"}
             link={"http://todo-app-nextjs-8edab.web.app"}
           />
-          <Card1 title={language === 'it' ? "Spotify con l'uso dell'API di Spotify(in corso)" : "Spotify w/ Spotify API(in progress)"}
+
+          <Card1 title={language === 'it' ? "Spotify clone in vanilla js" : "Spotify clone with vanilla js"}
             description={
               language === 'it'
                 ?
-                `Clone di Spotify utilizzando l'API di Spotify per 
-                creare una mia versione personale.`
+                `Clone di Spotify utilizzando solo vanilla JavaScript senza framework.`
                 :
-                `Clone of Spotify using the Spotify API to create my personal version.`
+                `Clone of Spotify using only vanilla JavaScript without framework.`
             }
-            sources={spotifySet}
-            youtube={"http://youtu.be/v6DOdeozrJ0"}
-            link={"https://github.com/csarmientobaca/spotify_clone_with_api"}
+            sources={spotifyVanillaSet}
+            youtube={"https://youtu.be/2S7qj6I5eXg"}
+            link={"https://github.com/Kaymax99/U2-Project"}
           />
           <Card1 title={language === 'it' ? "Impero romano con python e flask" : "Roman Empire with Python and Flask"}
             description={
@@ -310,6 +315,19 @@ export default function Home() {
             sources={linkedinSet}
             youtube={"#"}
             link={"https://github.com/369-Palma/build-week3-team6new"}
+          />
+          <Card1 title={language === 'it' ? "Spotify con l'uso dell'API di Spotify(in corso)" : "Spotify w/ Spotify API(in progress)"}
+            description={
+              language === 'it'
+                ?
+                `Clone di Spotify utilizzando l'API di Spotify per 
+                creare una mia versione personale.`
+                :
+                `Clone of Spotify using the Spotify API to create my personal version.`
+            }
+            sources={spotifySet}
+            youtube={"http://youtu.be/v6DOdeozrJ0"}
+            link={"https://github.com/csarmientobaca/spotify_clone_with_api"}
           />
         </section>
 
