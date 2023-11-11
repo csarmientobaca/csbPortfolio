@@ -106,17 +106,17 @@ export default function Home() {
           <nav className=' flex flex-wrap lg:justify-between justify-center'>
             <div className='relative rounded-full w-28 h-28 lg:block flex-shrink-0 my-10 overflow-hidden'>
               <Link href={"https://github.com/csarmientobaca"}>
-                < Image alt='myLogo' src={Logo} layout='fill' objectFit='cover' />
+                < Image className='transition-transform transform hover:scale-110' alt='myLogo' src={Logo} layout='fill' objectFit='cover' />
               </Link>
             </div>
             <ul className='flex flex-col lg:flex-row text-center mt-0 sm:mt-10'>
-              <li className='m-5'>
+              <li className='m-5 transition-transform transform hover:scale-105'>
                 <Link className='textMarmol px-5 py-4 text-2xl rounded-md ' href='/pdf'>
                   Resume
                 </Link>
               </li>
-              <li className='m-5 '>
-                <Link id='projectsLink' className='textMarmol px-5 py-4 text-2xl rounded-md' href="#">
+              <li className='m-5 transition-transform transform hover:scale-105'>
+                <Link id='projectsLink' className='textMarmol px-5 py-4 text-2xl rounded-md ' href="#">
                   Projects
                 </Link>
               </li>
@@ -124,7 +124,7 @@ export default function Home() {
 
             <button
               onClick={toggleLanguage}
-              className={`engbg  textMarmol p-4 text-2xl rounded-full mt-10 lg:ml-0`}
+              className={`engbg  textMarmol p-4 text-2xl rounded-full mt-10 lg:ml-0 transition-transform transform hover:scale-105 hover:bg-white`}
             >
               <Image
                 src={language === 'it' ? eng : ita}

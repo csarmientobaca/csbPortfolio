@@ -16,19 +16,19 @@ const NavFloating = () => {
             xl:h-screen right-0'>
                 <div className='bgTransparent textMarmol bigGreen flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-10 px-4 md:px-40 xl:px-0 h-[80px] xl:h-max py-8 backdrop:blur-sm text-3xl xl:text-2xl xl:rounded-full'>
                     <Link href={'/'}>
-                        <IoHome />
+                        <IoHome className='hover:animate-tremble' />
                     </Link>
                     <Link href={'https://www.linkedin.com/in/carlos-sarmiento-baca-64409bb6'}>
-                        <AiFillLinkedin />
+                        <AiFillLinkedin className='hover:animate-tremble' />
                     </Link>
                     <Link href={'https://twitter.com/CSarmientobaca'}>
-                        <RiTwitterXFill />
+                        <RiTwitterXFill className='hover:animate-tremble' />
                     </Link>
                     <Link href={'https://github.com/csarmientobaca'}>
-                        <AiFillGithub />
+                        <AiFillGithub className='hover:animate-tremble' />
                     </Link>
                     <Link href='/pdf'>
-                        <FaFilePdf />
+                        <FaFilePdf className='hover:animate-tremble' />
                     </Link>
 
                 </div>
