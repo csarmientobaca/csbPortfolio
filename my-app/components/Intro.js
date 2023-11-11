@@ -44,7 +44,7 @@ const Intro = () => {
                     Perito Informatico
                 </h1>
                 <div className="flex-1 flex items-end " id="title-3">
-                    <h1 className=" rounded-2xl p-1 -top-16 -right-72 divide-y divide-transparent text-9xl self-end transform rotate-90 absolute" >
+                    <h1 className=" rounded-2xl p-1 -top-10 -right-72 divide-y divide-transparent text-9xl self-end transform rotate-90 absolute" >
                         React/Nextjs
                     </h1>
                 </div>

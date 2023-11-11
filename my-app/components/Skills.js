@@ -34,7 +34,7 @@ const Skills = () => {
                 { image: css3, alt: 'css3', title: 'CSS3' },
                 { image: html5, alt: 'html5', title: 'HTML5' },
                 { image: postgreSQL, alt: 'postgreSQL', title: 'postgreSQL' },
-                { image: visualstudiocode, alt: 'visualstudio', title: 'VisualStudioCode' },
+                { image: visualstudiocode, alt: 'vsCode', title: 'vsCode' },
                 { image: github, alt: 'github', title: 'Github' },
                 { image: git, alt: 'git', title: 'git' },
                 { image: tailwind, alt: 'tailwind', title: 'tailwind' },
@@ -46,7 +46,7 @@ const Skills = () => {
             ].map((item, index) => (
                 <div
                     key={index}
-                    className='text-center group relative h-20 w-20'
+                    className='text-center group relative h-20 w-20 transition-transform transform hover:scale-150'
                 >
                     <h3 className='text-lg group-hover:text-md font-burtons transition-transform mb-1'>
                         {item.title}
