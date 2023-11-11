@@ -162,7 +162,7 @@ export default function Home() {
 
               <div className='text-center group relative h-20 w-20'>
                 <h3 className='text-lg group-hover:text-md font-burtons transition-transform mb-1'>
-                  {language === 'it' ? `Madrelingua` : `Native Speaker`}
+                  {language === 'it' ? `Madrelingua` : `Native`}
                 </h3>
                 <div className='group-hover:visible invisible absolute top-full left-1/2 transform -translate-x-1/2 -mt-2 bg-gray-800 text-white text-xs p-1 rounded'>
                   <p className='text-lg'>
