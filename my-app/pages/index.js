@@ -141,16 +141,14 @@ export default function Home() {
             <h1 className='textmovie text-5xl'>
               Full-stack Developer
             </h1>
-            <h3 className='description text-2xl py-2'>
+            <h3 className='description text-2xl py-5'>
               {language === 'it'
                 ?
-                `Sono uno sviluppatore junior fullstack con una solida competenza in linguaggi come JavaScript e Java,
-                ho anche avuto l'opportunità di sperimentare con linguaggi come Python.
-                La mia passione per la programmazione mi ha portato a esplorare diversi aspetti dello sviluppo web.`
+                `Sono uno sviluppatore junior fullstack con una solida competenza in linguaggi come JavaScript e Java e
+                ho anche avuto l'opportunità di sperimentare con Python.`
                 :
                 `I am a junior full-stack developer with a strong proficiency in languages such as JavaScript and Java. 
-                I have also had the opportunity to experiment with languages like Python. 
-                My passion for programming has led me to explore various aspects of web development.`
+                I have also had the opportunity to experiment Python`
               }
             </h3>
 
@@ -272,7 +270,7 @@ export default function Home() {
 
         {/* THIRD SECTION */}
         <section id='myGrid'
-          className=' grid grid-cols-1 lg:grid-cols-2 
+          className=' grid grid-cols-1 lg:grid-cols-3 
           md:grid-cols-2 justify-items-center justify-center gap-y-10 gap-x-32 mt-10 mb-40'>
 
           <Card1 title={language === 'it' ? "App Todo con riconoscimento vocale " : "Todo app with voice recognition"}
