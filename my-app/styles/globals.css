@@ -57,5 +57,7 @@ background-color: #222831;
 
 .engbg{
   background:url("/public/eng.png");
+  background-color: #222831;
+height: 80px;
 
 }

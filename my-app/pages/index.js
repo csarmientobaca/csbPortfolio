@@ -86,32 +86,37 @@ export default function Home() {
       </Head>
       <NavFloating />
       <main className='px-10 flex-wrap'>
-        <section className='min-h-screen'>
-          <nav className='py-10 mb-12 flex flex-wrap lg:justify-between justify-center'>
+        <section className=''>
+          <nav className=' flex flex-wrap lg:justify-between justify-center'>
             <div className='relative rounded-full w-28 h-28 lg:block flex-shrink-0 my-10 overflow-hidden'>
               <Link href={"https://github.com/csarmientobaca"}>
                 < Image alt='myLogo' src={Logo} layout='fill' objectFit='cover' />
               </Link>
             </div>
-            <ul className='flex flex-col lg:flex-row items-center '>
-              <li className='m-10'>
-                <Link className='textMarmol px-5 py-4 text-2xl rounded-md ml-8' href='/pdf'>
+            <ul className='flex flex-col lg:flex-row text-center mt-0 sm:mt-10'>
+              <li className='m-5'>
+                <Link className='textMarmol px-5 py-4 text-2xl rounded-md ' href='/pdf'>
                   Resume
                 </Link>
               </li>
-              <li className='m-10 '>
-                <Link id='projectsLink' className='textMarmol px-5 py-4 text-2xl rounded-md ml-8' href="#">
+              <li className='m-5 '>
+                <Link id='projectsLink' className='textMarmol px-5 py-4 text-2xl rounded-md' href="#">
                   Projects
                 </Link>
               </li>
             </ul>
+
             <button
               onClick={toggleLanguage}
-              className={`engbg textMarmol px-5 py-4 text-2xl rounded-md ml-8 lg:ml-0 ${language === 'it' ? 'mt-4 lg:mt-0' : ''}`}>
+              className={`engbg  textMarmol p-4 text-2xl rounded-full mt-10 lg:ml-0`}
+            >
               <Image
                 src={language === 'it' ? eng : ita}
-                className='relative p-0 h-20 w-20 rounded-full' alt='eng' />
+                className='relative p-0 h-10 w-10 rounded-full'
+                alt='eng'
+              />
             </button>
+
           </nav>
           <div className='text-center p-10'>
             <h1 className='bigOrange text-5xl py-2 font-medium'>
@@ -133,47 +138,79 @@ export default function Home() {
               }
             </h3>
 
-            <div className='flex flex-wrap sm:justify-center  space-x-20'>
+            <div className='max-w-md mx-auto grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-2 gap-8 items-center justify-center'>
 
-              <div className='my-16 w-14 h-14 mb-4 group relative cursor-pointer transition-transform transform hover:scale-105 flex flex-col items-center'>
-                <h3 className='text-center text-xl group-hover:text-2xl font-burtons transition-transform mb-1'>
-                  {language === 'it' ? `Di` : `From`}
+              <div className='text-center group relative h-20 w-20'>
+                <h3 className='text-lg group-hover:text-md font-burtons transition-transform mb-1'>
+                  {language === 'it' ? `Sono` : `I'm`}
                 </h3>
-                <Image className='text-center' src={peru} alt="peru" layout='responsive' loading='eager' />
+                <div className='group-hover:visible invisible absolute top-full left-1/2 transform -translate-x-1/2 -mt-2 bg-gray-800 text-white text-xs p-1 rounded'>
+                  <p className='text-lg'>
+                    {language ===
+                      'it'
+                      ? 'Peruviano'
+                      : 'Peruvian'}
+                  </p>
+                </div>
+                <Image className='h-8 w-8' src={peru} alt="peru" layout='responsive' loading='eager' />
               </div>
 
-              <div className='my-16 w-14 h-14 mb-4 group relative cursor-pointer transition-transform transform hover:scale-105 flex flex-col items-center'>
-                <h3 className='text-center text-xl group-hover:text-2xl font-burtons transition-transform mb-1'>
+              <div className='text-center group relative h-20 w-20'>
+                <h3 className='text-lg group-hover:text-md font-burtons transition-transform mb-1'>
                   {language === 'it' ? `Madrelingua` : `Native Speaker`}
                 </h3>
-                <Image className='text-center' src={spa} alt="peru" layout='responsive' loading='eager' />
+                <div className='group-hover:visible invisible absolute top-full left-1/2 transform -translate-x-1/2 -mt-2 bg-gray-800 text-white text-xs p-1 rounded'>
+                  <p className='text-lg'>
+                    {language ===
+                      'it'
+                      ? 'Spagnolo'
+                      : 'Spanish'
+                    }
+                  </p>
+                </div>
+                <Image className='h-8 w-8' src={spa} alt="spainish" layout='responsive' loading='eager' />
               </div>
 
-              <div className='my-16 w-14 h-14 mb-4 group relative cursor-pointer transition-transform transform hover:scale-105 flex flex-col items-center'>
-                <h3 className='text-center text-xl group-hover:text-2xl font-burtons transition-transform mb-1'>
+              <div className='text-center group relative h-20 w-20'>
+                <h3 className='text-lg group-hover:text-md font-burtons transition-transform mb-1'>
                   {language === 'it' ? `Fluente` : `Fluent`}
                 </h3>
-                <Image className='text-center' src={ita} alt="peru" layout='responsive' loading='eager' />
+                <div className='group-hover:visible invisible absolute top-full left-1/2 transform -translate-x-1/2 -mt-2 bg-gray-800 text-white text-xs p-1 rounded'>
+                  <p className='text-lg'>
+                    {language ===
+                      'it'
+                      ?
+                      'Italiano'
+                      :
+                      'Italian'}
+                  </p>
+                </div>
+                <Image className='h-8 w-8' src={ita} alt="italian" layout='responsive' loading='eager' />
               </div>
 
-              <div className='my-16 w-14 h-14 mb-4 group relative cursor-pointer transition-transform transform hover:scale-105 flex flex-col items-center'>
-                <h3 className='text-center text-xl group-hover:text-2xl font-burtons transition-transform mb-1'>
-                  B-2
+              <div className='text-center group relative h-20 w-20'>
+                <h3 className='text-lg group-hover:text-md font-burtons transition-transform mb-1'>
+                  B2
                 </h3>
-                <Image className='text-center' src={eng} alt="peru" layout='responsive' loading='eager' />
+                <div className='group-hover:visible invisible absolute top-full left-1/2 transform -translate-x-1/2 -mt-2 bg-gray-800 text-white text-xs p-1 rounded'>
+                  <p className='text-lg'>
+                    {language ===
+                      'it'
+                      ?
+                      'Inglese'
+                      :
+                      'English'}</p>
+                </div>
+                <Image className='h-8 w-8' src={eng} alt="english" layout='responsive' loading='eager' />
               </div>
-
             </div>
-
           </div>
-          <Skills />
-
         </section >
 
         {/* SECOND SECTION */}
         <section className="flex flex-col items-center md:flex-row md:items-center justify-center">
           <div className="max-w-md md:mr-8">
-            <h3 className='text-3xl py-1 my-5'>
+            <h3 className='text-3xl text-center py-1 my-5'>
               {language === 'it'
                 ?
                 `Se mi chiedeste cosa posso offrire alla vostra azienda, la mia risposta sarebbe la seguente:`
@@ -181,7 +218,7 @@ export default function Home() {
                 `If you asked me what I can offer to your company, my answer would be the following:`
               }
             </h3>
-            <p className='text-md py-2 leading-8'>
+            <p className='text-md text-center py-2 leading-8'>
               {language === 'it'
                 ?
                 `Posso garantirvi una carica di energia,
@@ -191,7 +228,7 @@ export default function Home() {
                 determination, and an insatiable thirst for learning.`
               }
             </p>
-            <p className='text-md py-2 leading-8'>
+            <p className='text-md text-center py-2 leading-8'>
               {language === 'it'
                 ?
                 `Sono convinto che con il mio desiderio di apprendere e la mia predisposizione
@@ -209,6 +246,8 @@ export default function Home() {
             <Image alt='myPhoto' src={me1} layout='fill' objectFit='cover' />
           </div>
         </section>
+        <Skills />
+
 
 
         <h3 className='text-3xl py-1 my-10'>

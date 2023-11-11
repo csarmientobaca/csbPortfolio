@@ -9,12 +9,17 @@ import css3 from "../public/css3.png"
 import html5 from "../public/html5.png"
 import bootstrap from "../public/bootstrap.png"
 import postgreSQL from "../public/postgreSQL.png"
+import visualstudiocode from "../public/visualstudiocode.png"
+import git from "../public/git.png"
+import github from "../public/github.png"
+
+
 
 const Skills = () => {
 
 
     return (
-        <div id='logos' className='flex flex-wrap justify-center space-x-4'>
+        <div id='logos' className='flex flex-wrap justify-center space-x-10'>
             {[
                 { image: react, alt: 'reactlogo', title: 'React' },
                 { image: next, alt: 'nextjslogo', title: 'Next.js' },
@@ -24,7 +29,12 @@ const Skills = () => {
                 { image: bootstrap, alt: 'Bootstrap', title: 'Bootstrap' },
                 { image: css3, alt: 'css3', title: 'CSS3' },
                 { image: html5, alt: 'html5', title: 'HTML5' },
-                { image: postgreSQL, alt: 'postgreSQL', title: 'postgreSQL' }
+                { image: postgreSQL, alt: 'postgreSQL', title: 'postgreSQL' },
+                { image: visualstudiocode, alt: 'visualstudio', title: 'VisualStudioCode' },
+                { image: github, alt: 'github', title: 'Github' },
+                { image: git, alt: 'git', title: 'git' }
+
+
             ].map((item, index) => (
                 <div
                     key={index}
