@@ -23,7 +23,7 @@ const Skills = () => {
 
 
     return (
-        <div id='logos' className='flex flex-wrap justify-center space-x-10'>
+        <div className='max-w-md mx-auto grid grid-cols-2 xl:grid-cols-4 sm:grid-cols-2 gap-8 items-center justify-center'>
             {[
                 { image: react, alt: 'reactlogo', title: 'React' },
                 { image: next, alt: 'nextjslogo', title: 'Next.js' },
@@ -46,12 +46,12 @@ const Skills = () => {
             ].map((item, index) => (
                 <div
                     key={index}
-                    className='my-16 w-32 h-32 mb-4 group relative cursor-pointer transition-transform transform hover:scale-105'
+                    className='text-center group relative h-20 w-20'
                 >
-                    <h3 className=' text-center text-xl group-hover:text-2xl font-semibold transition-transform -mt-8'>
+                    <h3 className='text-lg group-hover:text-md font-burtons transition-transform mb-1'>
                         {item.title}
                     </h3>
-                    <Image src={item.image} alt={item.alt} layout='responsive' width={128} height={128} loading='eager' />
+                    <Image className='h-8 w-8' src={item.image} alt={item.alt} layout='responsive' width={128} height={128} loading='eager' />
                 </div>
             ))}
         </div>
