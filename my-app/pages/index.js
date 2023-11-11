@@ -95,6 +95,8 @@ export default function Home() {
 
     <div >
       <Head>
+        <meta property="og:image" content="/public/preview.png" />
+
         <link rel="shortcut icon" href="/favicon.ico" />
         <title>Carlos Sarmiento Baca Portfolio</title>
       </Head>
